@@ -6,6 +6,15 @@ https://chromewebstore.google.com/detail/multi-city-timezone-clock/gcnacfafikohg
 
 A powerful Chrome extension that displays multiple city timezones simultaneously, allowing users to track time across different global locations with a clean, intuitive interface.
 
+## 🆕 What's New
+
+### v1.2
+- **Expanded City Database**: Added Miami, Islamabad, Kolkata, Chennai, Kuwait City, Sao Paulo, Guam, Chatham Islands, Kiritimati, Baker Island, and Noronha — city database now covers 1648+ cities
+- **Code Cleanup**: Removed dead code and duplicate logic across all files for a leaner, more maintainable codebase
+
+### v1.1
+- Initial release with multi-city timezone support
+
 ## 🎨 Snapshots
 <img width="426" height="266" alt="image" src="https://github.com/user-attachments/assets/104c33e3-41fd-41cf-a888-45abda6dc303" />
 
@@ -14,7 +23,7 @@ A powerful Chrome extension that displays multiple city timezones simultaneously
 
 - **Multi-City Time Display**: Add up to 5 cities and view their current times simultaneously
 - **Real-time Updates**: Time updates every minute with accurate timezone calculations
-- **Smart City Search**: Intelligent search with autocomplete for 1600+ global cities
+- **Smart City Search**: Intelligent search with autocomplete for 1648+ global cities
 - **Active City Highlighting**: One city can be set as active and displayed in the browser badge
 - **IANA Timezone Support**: Uses proper IANA timezone identifiers for accurate time calculations
 - **Persistent Storage**: Cities and preferences are saved across browser sessions
@@ -47,7 +56,7 @@ A powerful Chrome extension that displays multiple city timezones simultaneously
 - **Storage Integration**: Chrome Storage API for data persistence
 
 #### 4. **City Database** (`city.csv`)
-- Comprehensive database of 1600+ global cities
+- Comprehensive database of 1648+ global cities
 - UTC offset mapping for each city
 - Structured CSV format for easy parsing
 - Covers all major timezones worldwide
@@ -96,7 +105,7 @@ ce_GlobalTimezone/
 ├── background.js          # Service worker for background tasks
 ├── popup.html            # Main extension popup interface
 ├── popup.js              # Popup logic and city management
-├── city.csv              # Database of 1600+ global cities
+├── city.csv              # Database of 1648+ global cities
 ├── privacy.html          # Privacy policy page
 ├── icon/                 # Extension icons (16, 32, 48, 128px)
 ├── button/               # UI button icons
@@ -107,7 +116,7 @@ ce_GlobalTimezone/
 ## 🎯 Key Features Implementation
 
 ### 1. **Smart City Search**
-- Real-time filtering of 1600+ cities
+- Real-time filtering of 1648+ cities
 - Search by city name or UTC offset
 - Modal-based interface with keyboard navigation
 

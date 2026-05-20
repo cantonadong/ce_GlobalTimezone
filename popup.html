@@ -67,44 +67,7 @@
       font-size: 14px;
       color: #666;
     }
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 40px;
-      height: 20px;
-    }
-    .switch input {
-      display: none;
-    }
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      border-radius: 20px;
-      transition: 0.4s;
-    }
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 16px;
-      width: 16px;
-      left: 2px;
-      bottom: 2px;
-      background-color: white;
-      border-radius: 50%;
-      transition: 0.4s;
-    }
-    input:checked + .slider {
-      background-color: var(--primary-color);
-    }
-    input:checked + .slider:hover {
-      background-color: var(--primary-hover-color);
-    }
-    .btn-edit:hover, .btn-delete:hover {
+    .btn-delete:hover {
       background-color: #f0f0f0;
       border-radius: 4px;
     }
@@ -251,26 +214,12 @@
       vertical-align: middle; /* Align icon nicely */
     }
 
-    /* 新增：顶部当前时区时间显示区域样式 */
-    #currentTimeDisplay {
-      text-align: center;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      font-size: 22px;
-      font-weight: bold;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 0px;
-    }
-
-    /* 保留其他现有样式 */
   </style>
 </head>
 <body>
   <div id="localTimeBox" style="margin: 10px; padding: 10px; border: 3px solid #666; border-radius: 6px; font-size: 16px; line-height: 1.2; text-align: center; box-sizing: border-box;">
     <span id="localTime">--:--</span> <span id="localTz">Current Timezone</span>
   </div>
-  <div id="currentTimeDisplay"></div>
-
   <ul class="city-list" id="cityList"></ul>
   <div class="add-city" id="addCity" tabindex="0" style="margin: 8px auto 8px auto; width: calc(100% - 20px); box-sizing: border-box; padding: 10px 10px; font-size: 14px; height: 42px; line-height: 22px;">Add City</div>
 
