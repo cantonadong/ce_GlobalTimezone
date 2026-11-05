@@ -53,9 +53,9 @@ async function loadCityListFromCSV() {
   const lines = text.split(/\r?\n/).filter(line => line && !line.startsWith('UTC,City'));
   const cityList = [];
   for (const line of lines) {
-    const [utc, city] = line.split(',');
+    const [utc, city, timezone] = line.split(',');
     if (utc && city) {
-      cityList.push({ name: city.trim(), utc: utc.trim() });
+      cityList.push({ name: city.trim(), utc: utc.trim(), timezone: timezone?.trim() });
     }
   }
   return cityList;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   confirmAdd.onclick = async function() {
     if (selectedCity) {
-      const ianaTimezone = toIanaTimezone(selectedCity.utc);
+      const ianaTimezone = selectedCity.timezone || toIanaTimezone(selectedCity.utc);
       if (!cities.some(c => c.name === selectedCity.name && c.timezone === ianaTimezone)) {
         cities.forEach(c => c.active = false);
         cities.push({ name: selectedCity.name, timezone: ianaTimezone, active: true, utc: selectedCity.utc });
